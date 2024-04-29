@@ -1,15 +1,12 @@
 const { app, BrowserWindow } = require('electron/main')
 const path = require('path');
 const url = require('url');
-
+var AutoLaunch = require('auto-launch');
 const fs = require('fs');
 const { exec } = require('child_process');
 
-// Check if the app is packaged and running on Windows
-// if (require('electron-squirrel-startup')) {
-//     // Handle startup events for Windows
-//     app.quit();
-// }
+
+
 
 function createWindow() {
     // Create the browser window
@@ -45,3 +42,8 @@ app.on('activate', () => {
         createWindow();
     }
 });
+
+
+app.setLoginItemSettings({
+    openAtLogin: true,
+    openAsHidden:false})
