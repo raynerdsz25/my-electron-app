@@ -9,7 +9,7 @@ function createShortcut() {
     const appExecutablePath = path.join(__dirname, 'my-electron-app.exe'); // Replace with the path to your app's executable
 
     // Path to the Startup folder for the current user
-    const startupFolderPath = path.join('C:\ProgramData', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup');
+    const startupFolderPath = path.join('%\ProgramData%', 'Microsoft', 'Windows', 'Start Menu', 'Programs', 'Startup');
     const shortcutPath = path.join(startupFolderPath, `${appName}.lnk`);
 
     // Create the shortcut file
