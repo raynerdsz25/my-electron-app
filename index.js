@@ -6,10 +6,10 @@ const fs = require('fs');
 const { exec } = require('child_process');
 
 // Check if the app is packaged and running on Windows
-if (require('electron-squirrel-startup')) {
-    // Handle startup events for Windows
-    app.quit();
-}
+// if (require('electron-squirrel-startup')) {
+//     // Handle startup events for Windows
+//     app.quit();
+// }
 
 function createWindow() {
     // Create the browser window
