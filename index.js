@@ -1,7 +1,6 @@
 const { app, BrowserWindow } = require('electron/main')
 const path = require('path');
 const url = require('url');
-var AutoLaunch = require('auto-launch');
 const fs = require('fs');
 const { exec } = require('child_process');
 
