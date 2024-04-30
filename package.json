@@ -22,5 +22,10 @@
     "@electron/fuses": "^1.8.0",
     "electron": "^30.0.1",
     "electron-squirrel-startup": "^1.0.0"
+  },
+  "dependencies": {
+    "getmac": "^6.6.0",
+    "is-online": "^10.0.0",
+    "readline-promise": "^1.0.5"
   }
 }
