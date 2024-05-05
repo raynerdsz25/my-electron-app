@@ -24,8 +24,11 @@
     "electron-squirrel-startup": "^1.0.0"
   },
   "dependencies": {
+    "diskusage": "^1.2.0",
     "getmac": "^6.6.0",
     "is-online": "^10.0.0",
-    "readline-promise": "^1.0.5"
+    "readline-promise": "^1.0.5",
+    "systeminformation": "^5.22.7",
+    "wmi-client": "^0.5.0"
   }
 }
