@@ -3,12 +3,21 @@
 const { ipcRenderer } = require('electron');
 
 // Listen for devices event from the main process
-ipcRenderer.on('devices', (event, devices) => {
+
+
     // Populate the dropdown with options
-    const deviceSelect = document.getElementById('deviceSelect');
-    devices.forEach(device => {
-        const option = document.createElement('option');
-        option.textContent = device;
-        deviceSelect.appendChild(option);
+    ipcRenderer.on('devices', (event, data) => {
+        const deviceSelect = document.getElementById('deviceSelect');
+        data.forEach(option => {
+            const optionElement = document.createElement('option');
+            optionElement.value = option._id;
+            optionElement.textContent = option.name;
+            deviceSelect.appendChild(optionElement);
+        });
+  
+
+    deviceSelect.addEventListener('change', (event) => {
+        const selectedId = event.target.value;
+        ipcRenderer.send('selected-option', selectedId);
     });
 });
